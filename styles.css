@@ -1,10 +1,4 @@
-/* ==========================================
-   ELECTROTECH - STYLESHEET COMPLETO
-   ========================================== */
-
-/* ========== VARIABLES CSS (Modo Claro por defecto) ========== */
 :root {
-    /* Colores principales */
     --primary: #6C63FF;
     --primary-dark: #5A52D5;
     --primary-light: #8B83FF;
@@ -13,7 +7,6 @@
     --warning: #FFE66D;
     --success: #A8E6CF;
 
-    /* Modo Claro */
     --bg-primary: #F8F9FF;
     --bg-secondary: #FFFFFF;
     --bg-tertiary: #F0F2FF;
@@ -34,7 +27,6 @@
     --overlay-color: rgba(0, 0, 0, 0.5);
 }
 
-/* ========== MODO OSCURO ========== */
 [data-theme="dark"] {
     --bg-primary: #0F0F1A;
     --bg-secondary: #1A1A2E;
@@ -54,7 +46,6 @@
     --overlay-color: rgba(0, 0, 0, 0.7);
 }
 
-/* ========== RESET & BASE ========== */
 *, *::before, *::after {
     margin: 0;
     padding: 0;
@@ -91,7 +82,6 @@ img { max-width: 100%; display: block; }
     padding: 0 1.5rem;
 }
 
-/* ========== NAVBAR ========== */
 .navbar {
     position: fixed;
     top: 0;
@@ -174,7 +164,6 @@ img { max-width: 100%; display: block; }
     gap: 1rem;
 }
 
-/* Theme Toggle Button */
 .theme-toggle {
     width: 56px;
     height: 30px;
@@ -257,7 +246,6 @@ img { max-width: 100%; display: block; }
     transform: rotate(-45deg) translate(5px, -5px);
 }
 
-/* ========== HERO ========== */
 .hero {
     min-height: 100vh;
     display: flex;
@@ -399,7 +387,6 @@ img { max-width: 100%; display: block; }
     50% { transform: translate(30px, -30px); }
 }
 
-/* ========== PAGE HERO ========== */
 .page-hero {
     padding: 10rem 0 4rem;
     text-align: center;
@@ -428,7 +415,6 @@ img { max-width: 100%; display: block; }
     background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-tertiary) 100%);
 }
 
-/* ========== BUTTONS ========== */
 .btn {
     display: inline-flex;
     align-items: center;
@@ -471,7 +457,6 @@ img { max-width: 100%; display: block; }
     transform: translateY(-2px);
 }
 
-/* ========== SECTION TITLE ========== */
 .section-title {
     font-size: 2.2rem;
     font-weight: 800;
@@ -480,7 +465,6 @@ img { max-width: 100%; display: block; }
     color: var(--text-primary);
 }
 
-/* ========== CATEGORIES ========== */
 .categories {
     padding: 5rem 0;
 }
@@ -523,7 +507,6 @@ img { max-width: 100%; display: block; }
     color: var(--text-muted);
 }
 
-/* ========== PRODUCTS ========== */
 .products {
     padding: 5rem 0;
     background: var(--bg-tertiary);
@@ -624,7 +607,6 @@ img { max-width: 100%; display: block; }
     justify-content: center;
 }
 
-/* ========== PROMO BANNER ========== */
 .promo-banner {
     margin: 5rem 0;
     border-radius: 24px;
@@ -678,7 +660,6 @@ img { max-width: 100%; display: block; }
     transform: translateY(-2px);
 }
 
-/* ========== TESTIMONIALS ========== */
 .testimonials {
     padding: 5rem 0;
     background: var(--bg-tertiary);
@@ -742,7 +723,6 @@ img { max-width: 100%; display: block; }
     color: var(--text-muted);
 }
 
-/* ========== SERVICES SECTION ========== */
 .services-section {
     padding: 5rem 0;
 }
@@ -795,7 +775,6 @@ img { max-width: 100%; display: block; }
     color: var(--text-secondary);
 }
 
-/* ========== COMPARISON TABLE ========== */
 .comparison-section {
     padding: 5rem 0;
     background: var(--bg-tertiary);
@@ -864,7 +843,6 @@ img { max-width: 100%; display: block; }
     background: rgba(108, 99, 255, 0.15);
 }
 
-/* ========== FAQ ========== */
 .faq-section {
     padding: 5rem 0;
 }
@@ -931,7 +909,6 @@ img { max-width: 100%; display: block; }
     line-height: 1.8;
 }
 
-/* ========== CONTACT SECTION ========== */
 .contact-section {
     padding: 5rem 0;
 }
@@ -983,7 +960,6 @@ img { max-width: 100%; display: block; }
     color: var(--text-secondary);
 }
 
-/* ========== FORM ========== */
 .contact-form-wrapper {
     background: var(--bg-card);
     border: 1px solid var(--border-color);
@@ -1114,7 +1090,6 @@ img { max-width: 100%; display: block; }
     justify-content: center;
 }
 
-/* ========== MAP ========== */
 .map-section {
     padding: 3rem 0 5rem;
 }
@@ -1154,7 +1129,6 @@ img { max-width: 100%; display: block; }
     margin-bottom: 0.3rem;
 }
 
-/* ========== FOOTER ========== */
 .footer {
     background: var(--bg-footer);
     color: var(--text-on-dark);
@@ -1237,7 +1211,6 @@ img { max-width: 100%; display: block; }
     font-size: 0.85rem;
 }
 
-/* ========== INTERACTIVE CARD EFFECT ========== */
 .interactive-card {
     position: relative;
     overflow: hidden;
@@ -1260,7 +1233,6 @@ img { max-width: 100%; display: block; }
     transform: scaleX(1);
 }
 
-/* ========== TOAST NOTIFICATIONS ========== */
 .toast-container {
     position: fixed;
     top: 90px;
@@ -1322,7 +1294,6 @@ img { max-width: 100%; display: block; }
     to { transform: translateX(120%); opacity: 0; }
 }
 
-/* ========== ANIMATIONS ========== */
 @keyframes fadeInUp {
     from { opacity: 0; transform: translateY(30px); }
     to { opacity: 1; transform: translateY(0); }
@@ -1333,7 +1304,6 @@ img { max-width: 100%; display: block; }
     to { opacity: 1; transform: translateY(0); }
 }
 
-/* Scroll reveal */
 .reveal {
     opacity: 0;
     transform: translateY(40px);
@@ -1345,7 +1315,6 @@ img { max-width: 100%; display: block; }
     transform: translateY(0);
 }
 
-/* ========== RESPONSIVE ========== */
 @media (max-width: 992px) {
     .contact-grid {
         grid-template-columns: 1fr;
