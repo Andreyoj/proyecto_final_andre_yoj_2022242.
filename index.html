@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ElectroTech - Tu Tienda de Electrónica</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <span class="logo-icon"></span>Electro<span class="logo-accent">Tech</span>
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html" class="active">Inicio</a></li>
+                <li><a href="servicios.html">Servicios</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+            <div class="nav-right">
+                <button class="theme-toggle" id="themeToggle" title="Cambiar tema">
+                    <span class="theme-icon-light">☀️</span>
+                    <span class="theme-icon-dark">🌙</span>
+                </button>
+                <button class="hamburger" id="hamburger">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-particles" id="particles"></div>
+        <div class="container hero-content">
+            <span class="hero-badge">Nuevos productos 2026</span>
+            <h1 class="hero-title">
+                La Mejor <span class="gradient-text">Tecnología</span><br>
+                al Mejor Precio
+            </h1>
+            <p class="hero-description">
+                Descubre nuestra colección exclusiva de productos electrónicos.
+                Laptops, smartphones, audífonos y mucho más con envío gratuito.
+            </p>
+            <div class="hero-buttons">
+                <a href="#productos" class="btn btn-primary">
+                    🛒 Ver Productos
+                </a>
+                <a href="servicios.html" class="btn btn-secondary">
+                     Nuestros Servicios
+                </a>
+            </div>
+            <div class="hero-stats">
+                <div class="stat">
+                    <span class="stat-number" data-target="5000">0</span>
+                    <span class="stat-label">Productos</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number" data-target="12000">0</span>
+                    <span class="stat-label">Clientes felices</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number" data-target="15">0</span>
+                    <span class="stat-label">Marcas premium</span>
+                </div>
+            </div>
+        </div>
+        <div class="hero-decoration">
+            <div class="glow-circle glow-1"></div>
+            <div class="glow-circle glow-2"></div>
+        </div>
+    </section>
+
+    <section class="categories">
+        <div class="container">
+            <h2 class="section-title">️ Categorías</h2>
+            <div class="categories-grid">
+                <div class="category-card interactive-card" data-color="#6C63FF">
+                    <div class="category-icon">💻</div>
+                    <h3>Laptops</h3>
+                    <p>+200 modelos</p>
+                </div>
+                <div class="category-card interactive-card" data-color="#FF6B6B">
+                    <div class="category-icon">📱</div>
+                    <h3>Smartphones</h3>
+                    <p>+350 modelos</p>
+                </div>
+                <div class="category-card interactive-card" data-color="#4ECDC4">
+                    <div class="category-icon">🎧</div>
+                    <h3>Audífonos</h3>
+                    <p>+150 modelos</p>
+                </div>
+                <div class="category-card interactive-card" data-color="#FFE66D">
+                    <div class="category-icon">⌚</div>
+                    <h3>Wearables</h3>
+                    <p>+80 modelos</p>
+                </div>
+                <div class="category-card interactive-card" data-color="#A8E6CF">
+                    <div class="category-icon">️💻</div>
+                    <h3>Monitores</h3>
+                    <p>+120 modelos</p>
+                </div>
+                <div class="category-card interactive-card" data-color="#FF8A5C">
+                    <div class="category-icon">🎮</div>
+                    <h3>Gaming</h3>
+                    <p>+300 productos</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="products" id="productos">
+        <div class="container">
+            <h2 class="section-title">Productos Destacados</h2>
+            <div class="products-grid">
+                <div class="product-card interactive-card" data-color="#6C63FF">
+                    <div class="product-badge">Nuevo</div>
+                    <div class="product-image">💻</div>
+                    <div class="product-info">
+                        <span class="product-category">Laptops</span>
+                        <h3>MacBook Pro M4</h3>
+                        <p class="product-desc">Chip M4, 16GB RAM, 512GB SSD</p>
+                        <div class="product-price">
+                            <span class="price-current">Q4,400.00</span>
+                            <span class="price-old">Q12,800</span>
+                        </div>
+                        <button class="btn btn-primary btn-add-cart" onclick="addToCart('MacBook Pro M4')">
+                            🛒 Agregar al Carrito
+                        </button>
+                    </div>
+                </div>
+                <div class="product-card interactive-card" data-color="#FF6B6B">
+                    <div class="product-badge">-30%</div>
+                    <div class="product-image">📱</div>
+                    <div class="product-info">
+                        <span class="product-category">Smartphones</span>
+                        <h3>iPhone 16 Pro Max</h3>
+                        <p class="product-desc">256GB, Titanio Natural, A18 Pro</p>
+                        <div class="product-price">
+                            <span class="price-current">Q8,800.00</span>
+                            <span class="price-old">Q12,800.00</span>
+                        </div>
+                        <button class="btn btn-primary btn-add-cart" onclick="addToCart('iPhone 16 Pro Max')">
+                            🛒 Agregar al Carrito
+                        </button>
+                    </div>
+                </div>
+                <div class="product-card interactive-card" data-color="#4ECDC4">
+                    <div class="product-badge">Popular</div>
+                    <div class="product-image">🎧</div>
+                    <div class="product-info">
+                        <span class="product-category">Audífonos</span>
+                        <h3>Sony WH-1000XM6</h3>
+                        <p class="product-desc">Noise Cancelling, 40h batería</p>
+                        <div class="product-price">
+                            <span class="price-current">Q270.00</span>
+                            <span class="price-old">Q360.00</span>
+                        </div>
+                        <button class="btn btn-primary btn-add-cart" onclick="addToCart('Sony WH-1000XM6')">
+                             Agregar al Carrito
+                        </button>
+                    </div>
+                </div>
+                <div class="product-card interactive-card" data-color="#FFE66D">
+                    <div class="product-badge">Oferta</div>
+                    <div class="product-image">⌚</div>
+                    <div class="product-info">
+                        <span class="product-category">Wearables</span>
+                        <h3>Apple Watch Ultra 3</h3>
+                        <p class="product-desc">GPS + Cellular, Titanio, 72h</p>
+                        <div class="product-price">
+                            <span class="price-current">Q6,400.00</span>
+                            <span class="price-old">Q8,000.00</span>
+                        </div>
+                        <button class="btn btn-primary btn-add-cart" onclick="addToCart('Apple Watch Ultra 3')">
+                            🛒 Agregar al Carrito
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="promo-banner interactive-card" data-color="#6C63FF">
+        <div class="container promo-content">
+            <div>
+                <span class="promo-badge"> Oferta por tiempo limitado</span>
+                <h2>Hasta <span class="promo-discount">50% OFF</span> en Seleccionados</h2>
+                <p>No te pierdas las mejores ofertas en tecnología. ¡Compra ahora!</p>
+            </div>
+            <a href="servicios.html" class="btn btn-primary">Ver Ofertas </a>
+        </div>
+    </section>
+
+    <section class="testimonials">
+        <div class="container">
+            <h2 class="section-title"> Lo que dicen nuestros clientes</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial-card interactive-card" data-color="#6C63FF">
+                    <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+                    <p>"Excelente servicio, mi laptop llegó en perfecto estado y antes de lo esperado. ¡100% recomendado!"</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">👩</div>
+                        <div>
+                            <strong>María González</strong>
+                            <span>Compró MacBook Pro</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card interactive-card" data-color="#4ECDC4">
+                    <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+                    <p>"Los mejores precios que e   ncontré en internet. El soporte técnico es increíble y muy rápido."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar"></div>
+                        <div>
+                            <strong>Carlos Rodríguez</strong>
+                            <span>Compró iPhone 16 Pro</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card interactive-card" data-color="#FF6B6B">
+                    <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+                    <p>"Compré audífonos y un smartwatch. Todo llegó perfecto. La garantía extendida es un plus enorme."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">👩</div>
+                        <div>
+                            <strong>Ana Martínez</strong>
+                            <span>Compró Sony WH-1000XM6</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3> ElectroTech</h3>
+                    <p>Tu tienda de confianza para productos electrónicos de alta calidad.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link">📘</a>
+                        <a href="#" class="social-link">🐦</a>
+                        <a href="#" class="social-link">📸</a>
+                        <a href="#" class="social-link">▶️</a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Enlaces Rápidos</h4>
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="servicios.html">Servicios</a></li>
+                        <li><a href="contacto.html">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Soporte</h4>
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Envíos</a></li>
+                        <li><a href="#">Devoluciones</a></li>
+                        <li><a href="#">Garantía</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contacto</h4>
+                    <ul>
+                        <li>📍 Av. La reforma</li>
+                        <li> +502 31852417/li>
+                        <li>✉️ info@electrotech.com</li>
+                        <li>🕐 Lun-Sáb: 9am - 8pm</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>2026 ElectroTech. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <div id="toastContainer" class="toast-container"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>⚡ ElectroTech - Servicios</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- ========== NAVBAR ========== -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <span class="logo-icon"></span>Electro<span class="logo-accent">Tech</span>
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="servicios.html" class="active">Servicios</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+            <div class="nav-right">
+                <button class="theme-toggle" id="themeToggle" title="Cambiar tema">
+                    <span class="theme-icon-light">☀️</span>
+                    <span class="theme-icon-dark">🌙</span>
+                </button>
+                <button class="hamburger" id="hamburger">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <section class="page-hero services-hero">
+        <div class="container">
+            <span class="hero-badge">️ Lo que ofrecemos</span>
+            <h1 class="hero-title">Nuestros <span class="gradient-text">Servicios</span></h1>
+            <p class="hero-description">
+                Ofrecemos una amplia gama de servicios para hacer tu experiencia
+                de compra tecnológica la mejor posible.
+            </p>
+        </div>
+    </section>
+
+    <section class="services-section">
+        <div class="container">
+            <div class="services-grid">
+                <div class="service-card interactive-card" data-color="#6C63FF">
+                    <div class="service-icon">🚚</div>
+                    <h3>Envío Gratuito</h3>
+                    <p>En todas las compras mayores a $50. Recibe tus productos en la puerta de tu casa sin costo adicional.</p>
+                    <ul class="service-features">
+                        <li>- Envío en 24-48 horas</li>
+                        <li>- Rastreo en tiempo real</li>
+                        <li>- Embalaje seguro</li>
+                    </ul>
+                </div>
+                <div class="service-card interactive-card" data-color="#FF6B6B">
+                    <div class="service-icon">🔄</div>
+                    <h3>Devoluciones Fáciles</h3>
+                    <p>30 días para devolver tu producto si no estás satisfecho. Sin preguntas, sin complicaciones.</p>
+                    <ul class="service-features">
+                        <li>- 30 días de garantía</li>
+                        <li>- Reembolso completo</li>
+                        <li>- Recogida a domicilio</li>
+                    </ul>
+                </div>
+                <div class="service-card interactive-card" data-color="#4ECDC4">
+                    <div class="service-icon">️💻</div>
+                    <h3>Garantía Extendida</h3>
+                    <p>Hasta 3 años de garantía en todos nuestros productos. Tu inversión siempre protegida.</p>
+                    <ul class="service-features">
+                        <li>- 1 a 3 años de cobertura</li>
+                        <li>- Reparación o reemplazo</li>
+                        <li>- Soporte técnico 24/7</li>
+                    </ul>
+                </div>
+                <div class="service-card interactive-card" data-color="#FFE66D">
+                    <div class="service-icon">💳</div>
+                    <h3>Pagos Seguros</h3>
+                    <p>Múltiples métodos de pago con la más alta seguridad. Transacciones 100% protegidas.</p>
+                    <ul class="service-features">
+                        <li>- Tarjetas de crédito/débito</li>
+                        <li>- PayPal y transferencias</li>
+                        <li>- Cuotas sin interés</li>
+                    </ul>
+                </div>
+                <div class="service-card interactive-card" data-color="#A8E6CF">
+                    <div class="service-icon">👨‍💻</div>
+                    <h3>Soporte Técnico</h3>
+                    <p>Equipo de expertos disponible para ayudarte con cualquier problema o consulta técnica.</p>
+                    <ul class="service-features">
+                        <li>- Chat en vivo 24/7</li>
+                        <li>- Soporte remoto</li>
+                        <li>- Tutoriales y guías</li>
+                    </ul>
+                </div>
+                <div class="service-card interactive-card" data-color="#FF8A5C">
+                    <div class="service-icon">🏷️</div>
+                    <h3>Precios Competitivos</h3>
+                    <p>Igualamos cualquier precio de la competencia. Siempre el mejor precio garantizado.</p>
+                    <ul class="service-features">
+                        <li>- Igualación de precios</li>
+                        <li>- Ofertas semanales</li>
+                        <li>- Programa de fidelidad</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="comparison-section">
+        <div class="container">
+            <h2 class="section-title">Planes de Garantía</h2>
+            <div class="comparison-table-wrapper">
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Característica</th>
+                            <th>Básico</th>
+                            <th>Premium </th>
+                            <th>Enterprise</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Duración</td>
+                            <td>1 año</td>
+                            <td class="highlight-cell">2 años</td>
+                            <td>3 años</td>
+                        </tr>
+                        <tr>
+                            <td>Cobertura de pantalla</td>
+                            <td>❌</td>
+                            <td class="highlight-cell">✅</td>
+                            <td>✅</td>
+                        </tr>
+                        <tr>
+                            <td>Daños accidentales</td>
+                            <td>❌</td>
+                            <td>✅</td>
+                            <td class="highlight-cell">✅</td>
+                        </tr>
+                        <tr>
+                            <td>Reemplazo inmediato</td>
+                            <td>❌</td>
+                            <td>❌</td>
+                            <td class="highlight-cell">✅</td>
+                        </tr>
+                        <tr>
+                            <td>Soporte prioritario</td>
+                            <td>❌</td>
+                            <td>✅</td>
+                            <td class="highlight-cell">✅</td>
+                        </tr>
+                        <tr>
+                            <td>Precio</td>
+                            <td>Q100.00</td>
+                            <td>Q200.00</td>
+                            <td class="highlight-cell"><strong>Q500.00</strong></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <section class="faq-section">
+        <div class="container">
+            <h2 class="section-title">Preguntas Frecuentes</h2>
+            <div class="faq-container">
+                <div class="faq-item interactive-card" data-color="#6C63FF">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        ¿Cuánto tarda el envío?
+                        <span class="faq-arrow">▼</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>El envío estándar tarda entre 2 a 5 días hábiles. Para envíos express, recibes tu producto en 24-48 horas. Todos los envíos incluyen número de rastreo.</p>
+                    </div>
+                </div>
+                <div class="faq-item interactive-card" data-color="#4ECDC4">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        ¿Puedo devolver un producto abierto?
+                        <span class="faq-arrow">▼</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Sí, aceptamos devoluciones de productos abiertos dentro de los 30 días posteriores a la compra, siempre que se encuentren en buenas condiciones y con todos sus accesorios originales.</p>
+                    </div>
+                </div>
+                <div class="faq-item interactive-card" data-color="#FF6B6B">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        ¿Ofrecen facturación electrónica?
+                        <span class="faq-arrow">▼</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Sí, emitimos factura electrónica automáticamente. Puedes solicitarla al momento de tu compra o hasta 7 días después de recibir tu producto.</p>
+                    </div>
+                </div>
+                <div class="faq-item interactive-card" data-color="#FFE66D">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        ¿Tienen tienda física?
+                        <span class="faq-arrow">▼</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Sí, contamos con tiendas físicas en las principales ciudades. Puedes visitar nuestra tienda principal en Av. Tecnología #123, abierta de lunes a sábado de 9am a 8pm.</p>
+                    </div>
+                </div>
+                <div class="faq-item interactive-card" data-color="#A8E6CF">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        ¿Los productos tienen garantía?
+                        <span class="faq-arrow">▼</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Todos nuestros productos incluyen garantía del fabricante de 1 año. Además, ofrecemos planes de garantía extendida de hasta 3 años adicionales con cobertura ampliada.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>ElectroTech</h3>
+                    <p>Tu tienda de confianza para productos electrónicos de alta calidad.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link">📘</a>
+                        <a href="#" class="social-link">🐦</a>
+                        <a href="#" class="social-link">💻</a>
+                        <a href="#" class="social-link">▶️</a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Enlaces Rápidos</h4>
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="servicios.html">Servicios</a></li>
+                        <li><a href="contacto.html">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Soporte</h4>
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Envíos</a></li>
+                        <li><a href="#">Devoluciones</a></li>
+                        <li><a href="#">Garantía</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contacto</h4>
+                    <ul>
+                        <li>📍 Av. La reforma</li>
+                        <li> +502 31852417/li>
+                        <li>✉️ info@electrotech.com</li>
+                        <li>🕐 Lun-Sáb: 9am - 8pm</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>2026 ElectroTech. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <div id="toastContainer" class="toast-container"></div>
+    <script src="script.js"></script>
+</body>
+</html>
