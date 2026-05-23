@@ -1,7 +1,3 @@
-/* ==========================================
-   ELECTROTECH - JAVASCRIPT COMPLETO
-   ========================================== */
-
 document.addEventListener('DOMContentLoaded', function() {
     initTheme();
     initNavbar();
@@ -14,9 +10,6 @@ document.addEventListener('DOMContentLoaded', function() {
     initCharacterCounter();
 });
 
-/* ==========================================
-   TEMA (MODO OSCURO / CLARO)
-   ========================================== */
 function initTheme() {
     const savedTheme = localStorage.getItem('theme') || 'light';
     document.documentElement.setAttribute('data-theme', savedTheme);
@@ -37,9 +30,7 @@ function initTheme() {
     }
 }
 
-/* ==========================================
-   NAVBAR SCROLL
-   ========================================== */
+
 function initNavbar() {
     const navbar = document.querySelector('.navbar');
     window.addEventListener('scroll', function() {
@@ -51,9 +42,6 @@ function initNavbar() {
     });
 }
 
-/* ==========================================
-   HAMBURGER MENU
-   ========================================== */
 function initHamburger() {
     const hamburger = document.getElementById('hamburger');
     const navLinks = document.getElementById('navLinks');
@@ -64,7 +52,6 @@ function initHamburger() {
             navLinks.classList.toggle('active');
         });
 
-        // Cerrar menú al hacer clic en un enlace
         navLinks.querySelectorAll('a').forEach(function(link) {
             link.addEventListener('click', function() {
                 hamburger.classList.remove('active');
@@ -72,7 +59,6 @@ function initHamburger() {
             });
         });
 
-        // Cerrar al hacer clic fuera
         document.addEventListener('click', function(e) {
             if (!navLinks.contains(e.target) && !hamburger.contains(e.target)) {
                 hamburger.classList.remove('active');
@@ -82,9 +68,6 @@ function initHamburger() {
     }
 }
 
-/* ==========================================
-   SCROLL REVEAL (Animaciones al hacer scroll)
-   ========================================== */
 function initScrollReveal() {
     const reveals = document.querySelectorAll(
         '.category-card, .product-card, .service-card, .testimonial-card, .faq-item, .info-card'
@@ -108,12 +91,10 @@ function initScrollReveal() {
     }
 
     window.addEventListener('scroll', checkReveal);
-    checkReveal(); // Verificar al cargar
+    checkReveal(); 
 }
 
-/* ==========================================
-   CONTADORES ANIMADOS
-   ========================================== */
+
 function initCounters() {
     const counters = document.querySelectorAll('.stat-number');
 
@@ -127,7 +108,6 @@ function initCounters() {
                 const elapsed = currentTime - startTime;
                 const progress = Math.min(elapsed / duration, 1);
 
-                // Easing: ease-out cubic
                 const eased = 1 - Math.pow(1 - progress, 3);
                 const current = Math.floor(eased * target);
 
@@ -142,7 +122,6 @@ function initCounters() {
         });
     }
 
-    // Iniciar cuando el hero sea visible
     const observer = new IntersectionObserver(function(entries) {
         entries.forEach(function(entry) {
             if (entry.isIntersecting) {
@@ -156,9 +135,6 @@ function initCounters() {
     if (statsSection) observer.observe(statsSection);
 }
 
-/* ==========================================
-   PARTÍCULAS DECORATIVAS
-   ========================================== */
 function initParticles() {
     const container = document.getElementById('particles');
     if (!container) return;
@@ -185,7 +161,6 @@ function initParticles() {
         container.appendChild(particle);
     }
 
-    // Agregar keyframe dinámicamente
     const style = document.createElement('style');
     style.textContent = `
         @keyframes floatParticle {
@@ -198,9 +173,6 @@ function initParticles() {
     document.head.appendChild(style);
 }
 
-/* ==========================================
-   INTERACCIÓN DE TARJETAS
-   ========================================== */
 function initCardInteractions() {
     const cards = document.querySelectorAll('.interactive-card');
 
@@ -212,7 +184,6 @@ function initCardInteractions() {
             }
         });
 
-        // Efecto de brillo al mover el mouse
         card.addEventListener('mousemove', function(e) {
             const rect = this.getBoundingClientRect();
             const x = e.clientX - rect.left;
@@ -237,32 +208,23 @@ function initCardInteractions() {
     });
 }
 
-/* ==========================================
-   FAQ ACCORDION
-   ========================================== */
 function toggleFaq(button) {
     const item = button.parentElement;
     const wasActive = item.classList.contains('active');
 
-    // Cerrar todos
     document.querySelectorAll('.faq-item').forEach(function(faq) {
         faq.classList.remove('active');
     });
 
-    // Abrir el seleccionado (si no estaba abierto)
     if (!wasActive) {
         item.classList.add('active');
     }
 }
 
-/* ==========================================
-   FORMULARIO DE CONTACTO - VALIDACIÓN ROBUSTA
-   ========================================== */
 function initContactForm() {
     const form = document.getElementById('contactForm');
     if (!form) return;
 
-    // Validación en tiempo real al escribir
     const fields = ['fullName', 'email', 'phone', 'subject', 'message'];
     fields.forEach(function(fieldId) {
         const field = document.getElementById(fieldId);
@@ -277,7 +239,6 @@ function initContactForm() {
         }
     });
 
-    // Checkbox terms
     const terms = document.getElementById('terms');
     if (terms) {
         terms.addEventListener('change', function() {
@@ -285,11 +246,9 @@ function initContactForm() {
         });
     }
 
-    // Submit
     form.addEventListener('submit', function(e) {
         e.preventDefault();
 
-        // Validar todos los campos
         let allValid = true;
         fields.forEach(function(fieldId) {
             if (!validateField(fieldId)) {
@@ -302,10 +261,8 @@ function initContactForm() {
         }
 
         if (allValid) {
-            // Éxito
             showToast('✅ ¡Mensaje enviado exitosamente! Te contactaremos pronto.', 'success');
 
-            // Alert personalizado con resumen
             const name = document.getElementById('fullName').value;
             const email = document.getElementById('email').value;
             const subject = document.getElementById('subject');
@@ -320,7 +277,6 @@ function initContactForm() {
                 'Nos pondremos en contacto contigo en las próximas 24 horas.'
             );
 
-            // Limpiar formulario
             form.reset();
             fields.forEach(function(fieldId) {
                 const f = document.getElementById(fieldId);
@@ -336,7 +292,6 @@ function initContactForm() {
         }
     });
 
-    // Botón limpiar
     const clearBtn = document.getElementById('clearBtn');
     if (clearBtn) {
         clearBtn.addEventListener('click', function() {
@@ -472,7 +427,6 @@ function validateField(fieldId) {
             break;
     }
 
-    // Actualizar UI
     if (isValid) {
         field.classList.remove('invalid');
         field.classList.add('valid');
@@ -486,9 +440,6 @@ function validateField(fieldId) {
     return isValid;
 }
 
-/* ==========================================
-   CONTADOR DE CARACTERES
-   ========================================== */
 function initCharacterCounter() {
     const textarea = document.getElementById('message');
     const counter = document.getElementById('charCount');
@@ -510,13 +461,9 @@ function initCharacterCounter() {
     }
 }
 
-/* ==========================================
-   AGREGAR AL CARRITO
-   ========================================== */
 function addToCart(productName) {
     showToast('🛒 "' + productName + '" agregado al carrito.', 'success');
 
-    // Efecto visual en el botón
     const buttons = document.querySelectorAll('.btn-add-cart');
     buttons.forEach(function(btn) {
         if (btn.textContent.includes(productName)) {
@@ -530,9 +477,7 @@ function addToCart(productName) {
     });
 }
 
-/* ==========================================
-   SISTEMA DE TOAST NOTIFICATIONS
-   ========================================== */
+
 function showToast(message, type) {
     type = type || 'info';
     const container = document.getElementById('toastContainer');
@@ -543,7 +488,6 @@ function showToast(message, type) {
     toast.textContent = message;
     container.appendChild(toast);
 
-    // Auto-remove
     setTimeout(function() {
         toast.classList.add('toast-exit');
         setTimeout(function() {
